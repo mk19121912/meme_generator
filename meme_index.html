@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Meme Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-image: url('https://gist.githubusercontent.com/brudnak/aba00c9a1c92d226f68e8ad8ba1e0a40/raw/e1e4a92f6072d15014f19aa8903d24a1ac0c41a4/nyan-cat.gif');
+      background-color: #ffffff;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    h1 {
+      text-align: center;
+      font-family:'Comic Sans MS', 'Courier New', Courier, monospace, sans-serif;
+      font-weight: bolder;
+      color: #000000;
+      background-color: #ffffff;
+    }
+
+    p {
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace, serif;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: normal;
+      color: #000000;
+      background-color: #ffffff;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .image_container {
+      width: 500px;
+      height: 500px;
+    }
+
+    .img_src {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="center">
+    <h1>The Ultimate Meme Generator</h1>
+    <p>Here is your meme!</p>
+    <p class="image_container"><img class="img_src" src="{{meme_pic}}" id="memeImage"></p>
+    <p>Current subreddit: {{subreddit}}</p>
+    <button type="button" class="btn btn-primary btn-lg" onclick="generateNewMeme()">Generate New Meme</button>
+  </div>
+
+  <script>
+    function generateNewMeme() {
+      location.reload(); // Reload the page to fetch a new meme
+    }
+  </script>
+</body>
+</html>
